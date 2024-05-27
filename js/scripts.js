@@ -1,4 +1,49 @@
 $(function(){
+
+    let exemples = true;
+    
+    $('#exemples-btn').click(function(){
+        if(exemples) return;
+        exemples = true;
+
+        const $btnExemples = $('#exemples-btn');
+        $btnExemples.removeClass('btn-dark');
+        $btnExemples.addClass(['text-white', 'btn-secondary']);
+        $btnExemples.css('opacity', '');
+        
+        const $btnExemples2 = $('#exemples2-btn');
+        $btnExemples2.removeClass(['text-white', 'btn-secondary']);
+        $btnExemples2.addClass('btn-dark');
+        $btnExemples2.css('opacity', '0.5');
+
+        const $exemplesContainer = $('#exemples-container');
+        $exemplesContainer.show();
+
+        const $exemples2Container = $('#exemples2-container');
+        $exemples2Container.hide();
+    })
+
+    $('#exemples2-btn').click(function(){
+        if(!exemples) return;
+        exemples = false;
+
+        const $btnExemples2 = $('#exemples2-btn');
+        $btnExemples2.removeClass('btn-dark');
+        $btnExemples2.addClass(['text-white', 'btn-secondary']);
+        $btnExemples2.css('opacity', '');
+
+        const $btnExemples = $('#exemples-btn');
+        $btnExemples.removeClass(['text-white', 'btn-secondary']);
+        $btnExemples.addClass('btn-dark');
+        $btnExemples.css('opacity', '0.5');
+
+        const $exemples2Container = $('#exemples2-container');
+        $exemples2Container.show();
+
+        const $exemplesContainer = $('#exemples-container');
+        $exemplesContainer.hide();
+    })
+
     /* Exemple 1 */
     $('#exemple-1-btn').click(function(){
         $('#exemple-1-content').text("Le contenu text a changé.");
@@ -88,4 +133,122 @@ $(function(){
         $('#exemple-10-content').next('p').remove();
     });
     /* Fin exemple 10 */
+
+    /* Exemple 11 */
+    $('#exemple-11-btn').click(function(){
+        $('#exemple-11-content').css({
+            'background-color': 'grey'
+        });
+    });
+    $('#exemple-11-reset-btn').click(function(){
+        $('#exemple-11-content').css({
+            'background-color': ''
+        });
+    });
+    /* Fin Exemple 11 */
+
+    /* Exemple 12 */
+    $('#exemple-12-btn').click(function(){
+        $('#exemple-12-content').show();
+    });
+    $('#exemple-12-reset-btn').click(function(){
+        $('#exemple-12-content').hide();
+    });
+    /* Fin Exemple 12 */
+
+    /* Exemple 13 */
+    $('#exemple-13-btn').click(function(){
+        $('#exemple-13-content').hide();
+    });
+    $('#exemple-13-reset-btn').click(function(){
+        $('#exemple-13-content').show();
+    });
+    /* Fin Exemple 13 */
+
+    /* Exemple 14 */
+    $('#exemple-14-btn').click(function(){
+        $('#exemple-14-content').toggle();
+    });
+    $('#exemple-14-reset-btn').click(function(){
+        $('#exemple-14-content').show();
+    });
+    /* Fin Exemple 14 */
+
+    /* Exemple 15 */
+    $('#exemple-15-btn').click(function(){
+        $('#exemple-15-content').parent().css({
+            'background-color': 'lightblue'
+        });
+    });
+    $('#exemple-15-reset-btn').click(function(){
+        $('#exemple-15-parent').css({
+            'background-color': ''
+        });
+    });
+    /* Fin Exemple 15 */
+
+    /* Exemple 16 */
+    $('#exemple-16-btn').click(function(){
+        $('#exemple-16-content').css({
+            'background-color': 'yellow'
+        });
+    });
+    $('#exemple-16-reset-btn').click(function(){
+        $('#exemple-16-content').css({
+            'background-color': ''
+        });
+    });
+    /* Fin Exemple 16 */
+
+    /* Exemple 17 */
+    $('#exemple-17-btn').click(function(){
+        $('#exemple-17-content').remove();
+    });
+    $('#exemple-17-reset-btn').click(function(){
+        $('#exemple-17-parent').append('<div class="my-1 border p-5" id="exemple-17-content">Cet élément sera supprimé lorsque vous appuierez sur le bouton.</div>');
+    });
+    /* Fin Exemple 17 */
+
+    /* Exemple 18 */
+    $('#exemple-18-btn').click(function(){
+        $('#exemple-18-content').animate({
+            opacity: 0.5,
+            left: "+=50"
+        }, 1000);
+    });
+    $('#exemple-18-reset-btn').click(function(){
+        $('#exemple-18-content').css({
+            opacity: 1,
+            left: 0
+        });
+    });
+    /* Fin Exemple 18 */
+
+    /* Exemple 19 */
+    $('#exemple-19-btn').click(function(){
+        $('#exemple-19-content').next().css({
+            'background-color': 'lightgreen'
+        });
+    });
+    $('#exemple-19-reset-btn').click(function(){
+        $('#exemple19 div').css({
+            'background-color': ''
+        });
+    });
+    /* Fin Exemple 19 */
+
+    /* Exemple 20 */
+    $('#exemple-20-btn').click(function(){
+        $('#exemple-20-content').prev().css({
+            'background-color': 'lightcoral'
+        });
+    });
+    $('#exemple-20-reset-btn').click(function(){
+        $('#exemple20 div').css({
+            'background-color': ''
+        });
+    });
+    /* Fin Exemple 20 */
+
+
 });

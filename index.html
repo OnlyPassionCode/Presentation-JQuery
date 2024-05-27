@@ -177,120 +177,261 @@
 
 
             <div class="container" id="content">
-                <div class="row">
-                    <h3>Exemple 1: Modifier le texte d'un élément.</h3>
-                    <div>Vous pouvez modifier le texte d'un élément avec l'aide de la fonction <strong class="code-tips">.text(text: string)</strong>.</div>
-                    <div id="exemple1">
-                        <div class="my-1 border p-5" id="exemple-1-content">Lorsque vous appuyerez sur le bouton mon contenue de texte changera.</div>
-                        <div class="mt-3">
-                            <button class="btn btn-secondary text-white" id="exemple-1-btn">Changer le texte</button>
-                            <button class="btn btn-primary" id="exemple-1-reset-btn">Reset</button>
-                        </div>
+                <div class="row gap-5 justify-content-center">
+                    <button class="btn btn-secondary text-white col-4" id="exemples-btn">Exemples</button>
+                    <button class="btn btn-dark col-4" id="exemples2-btn" style="opacity: 0.5;">Plus d'exemples</button>
+                </div>
+                <div class="row mt-5 ms-1">
+                    <div>
+                        <i class="text-muted"><strong class="code-tips">NB :</strong> les paramètres entouré de <strong class="code-tips">[]</strong> signifie qu'ils sont facultatif.</i>
                     </div>
                 </div>
-                <div class="row mt-5">
-                    <h3>Exemple 2: Disparition avec une animation.</h3>
-                    <div>Vous pouvez faire une animation de disparation avec l'aide de la la fonction <strong class="code-tips">.slideUp(duration: (default: 400), complete: Function)</strong>.</div>
-                    <div id="exemple2">
-                        <div class="my-1 border p-5" id="exemple-2-content">Lorsque vous appuyerez sur le bouton je vais me cacher avec une animation.</div>
-                        <div class="mt-3">
-                            <button class="btn btn-secondary text-white" id="exemple-2-btn">Cacher le texte</button>
-                            <button class="btn btn-primary" id="exemple-2-reset-btn">Reset</button>
+                <div class="container" id="exemples2-container" style="display: none;">
+                    <div class="row mt-5">
+                        <h3>Exemple 11: Changer la couleur de fond.</h3>
+                        <div>Vous pouvez changer la couleur de fond d'un élément avec l'aide de la fonction <strong class="code-tips">.css(properties: object)</strong>.</div>
+                        <div id="exemple11">
+                            <div class="my-1 border p-5" id="exemple-11-content">Lorsque vous appuierez sur le bouton ma couleur de fond changera.</div>
+                            <div class="mt-3">
+                                <button class="btn btn-secondary text-white" id="exemple-11-btn">Changer la couleur de fond</button>
+                                <button class="btn btn-primary" id="exemple-11-reset-btn">Reset</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row mt-5">
-                    <h3>Exemple 3: Apparition/Disparition avec une animation.</h3>
-                    <div>Vous pouvez faire une animation d'apparition/disparition avec l'aide de la fonction <strong class="code-tips">.slideToggle(duration: (default: 400), complete: Function)</strong>.</div>
-                    <div id="exemple3">
-                        <div class="my-1 border p-5" id="exemple-3-content">Lorsque vous appuyerez sur le bouton je vais basculer avec une animation de slide.</div>
-                        <div class="mt-3">
-                            <button class="btn btn-secondary text-white" id="exemple-3-btn">Basculer le texte</button>
-                            <button class="btn btn-primary" id="exemple-3-reset-btn">Reset</button>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="row mt-5">
-                    <h3>Exemple 4: Apparition avec une opacité.</h3>
-                    <div>Vous pouvez faire apparaître un élément via son opacité avec l'aide de la fonction <strong class="code-tips">.fadeIn(duration: (default: 400), complete: Function)</strong>.</div>
-                    <div id="exemple4">
-                        <div class="my-1 border p-5" id="exemple-4-content" style="display: none;">Lorsque vous appuyerez sur le bouton je vais apparaître graduellement.</div>
-                        <div class="mt-3">
-                            <button class="btn btn-secondary text-white" id="exemple-4-btn">Apparaitre</button>
-                            <button class="btn btn-primary" id="exemple-4-reset-btn">Reset</button>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="row mt-5">
-                    <h3>Exemple 5: Disparition avec une opacité.</h3>
-                    <div>Vous pouvez faire disparaître un élément via son opacité avec l'aide de la fonction <strong class="code-tips">.fadeOut(duration: (default: 400), complete: Function)</strong>.</div>
-                    <div id="exemple5">
-                        <div class="my-1 border p-5" id="exemple-5-content">Lorsque vous appuyerez sur le bouton je vais disparaître graduellement.</div>
-                        <div class="mt-3">
-                            <button class="btn btn-secondary text-white" id="exemple-5-btn">Disparaitre</button>
-                            <button class="btn btn-primary" id="exemple-5-reset-btn">Reset</button>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="row mt-5">
-                    <h3>Exemple 6: Apparition/Disparition avec une opacité</h3>
-                    <div>Vous pouvez faire un basculement d'opacité avec l'aide de la fonction <strong class="code-tips">.fadeToggle(duration: (default: 400), complete: Function)</strong>.</div>
-                    <div id="exemple6">
-                        <div class="my-1 border p-5" id="exemple-6-content">Lorsque vous appuyerez sur le bouton je vais basculer en opacité ( visible / invisible ).</div>
-                        <div class="mt-3">
-                            <button class="btn btn-secondary text-white" id="exemple-6-btn">Basculer l'apparition</button>
-                            <button class="btn btn-primary" id="exemple-6-reset-btn">Reset</button>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="row mt-5">
-                    <h3>Exemple 7: Changer l'opacité d'un élément.</h3>
-                    <div>Vous pouvez changer l'opacité d'un élément avec l'aide de la fonction <strong class="code-tips">.fadeTo(duration: number, opacity: float, complete: Function)</strong>.</div>
-                    <div id="exemple7">
-                        <div class="my-1 border p-5" id="exemple-7-content">Lorsque vous appuyerez sur le bouton, mon opacité changera.</div>
-                        <div class="mt-3">
-                            <button class="btn btn-secondary text-white" id="exemple-7-btn">Changer l'opacité</button>
-                            <button class="btn btn-primary" id="exemple-7-reset-btn">Reset</button>
+                    <div class="row mt-5">
+                        <h3>Exemple 12: Afficher un élément.</h3>
+                        <div>Vous pouvez afficher un élément avec l'aide de la fonction <strong class="code-tips">.show([duration: (default: 400)] [, complete: Function])</strong>.</div>
+                        <div id="exemple12">
+                            <div class="my-1 border p-5" id="exemple-12-content" style="display: none;">Cet élément sera affiché lorsque vous appuierez sur le bouton.</div>
+                            <div class="mt-3">
+                                <button class="btn btn-secondary text-white" id="exemple-12-btn">Afficher l'élément</button>
+                                <button class="btn btn-primary" id="exemple-12-reset-btn">Reset</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="row mt-5">
-                    <h3>Exemple 8: Ajouter un élément au début.</h3>
-                    <div>Vous pouvez ajouter un élément au début d'un autre élément avec l'aide de la fonction <strong class="code-tips">.prepend(content)</strong>.</div>
-                    <div id="exemple8">
-                        <div class="my-1 border p-5" id="exemple-8-content">Du contenu s'ajoutera avant ce texte lorsque vous appuyerez sur le bouton.</div>
-                        <div class="mt-3">
-                            <button class="btn btn-secondary text-white" id="exemple-8-btn">Ajouter du texte au début</button>
-                            <button class="btn btn-primary" id="exemple-8-reset-btn">Reset</button>
+                    
+                    <div class="row mt-5">
+                        <h3>Exemple 13: Cacher un élément.</h3>
+                        <div>Vous pouvez cacher un élément avec l'aide de la fonction <strong class="code-tips">.hide([duration: (default: 400)] [, complete: Function])</strong>.</div>
+                        <div id="exemple13">
+                            <div class="my-1 border p-5" id="exemple-13-content">Cet élément sera caché lorsque vous appuierez sur le bouton.</div>
+                            <div class="mt-3">
+                                <button class="btn btn-secondary text-white" id="exemple-13-btn">Cacher l'élément</button>
+                                <button class="btn btn-primary" id="exemple-13-reset-btn">Reset</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="row mt-5">
-                    <h3>Exemple 9: Ajouter un élément avant un autre élément.</h3>
-                    <div>Vous pouvez ajouter un élément avant un autre élément avec l'aide de la fonction <strong class="code-tips">.before(content)</strong>.</div>
-                    <div id="exemple9">
-                        <div class="my-1 border p-5" id="exemple-9-content">Un élément va s'ajouter <strong>avant</strong> moi lorsque vous appuyerez sur le bouton.</div>
-                        <div class="mt-3">
-                            <button class="btn btn-secondary text-white" id="exemple-9-btn">Ajouter du texte avant</button>
-                            <button class="btn btn-primary" id="exemple-9-reset-btn">Reset</button>
+                    
+                    <div class="row mt-5">
+                        <h3>Exemple 14: Basculer l'affichage d'un élément.</h3>
+                        <div>Vous pouvez basculer l'affichage d'un élément avec l'aide de la fonction <strong class="code-tips">.toggle([duration: (default: 400)] [, complete: Function])</strong>.</div>
+                        <div id="exemple14">
+                            <div class="my-1 border p-5" id="exemple-14-content">Cet élément sera basculé lorsque vous appuierez sur le bouton.</div>
+                            <div class="mt-3">
+                                <button class="btn btn-secondary text-white" id="exemple-14-btn">Basculer l'affichage</button>
+                                <button class="btn btn-primary" id="exemple-14-reset-btn">Reset</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    
+                    <div class="row mt-5">
+                        <h3>Exemple 15: Sélectionner le parent d'un élément.</h3>
+                        <div>Vous pouvez sélectionner le parent d'un élément avec l'aide de la fonction <strong class="code-tips">.parent()</strong>.</div>
+                        <div id="exemple15">
+                            <div class="my-1 border p-5" id="exemple-15-parent">
+                                Parent
+                                <div class="my-1 border p-5" id="exemple-15-content" style="background-color: grey; color: white;">Enfant</div>
+                            </div>
+                            <div class="mt-3">
+                                <button class="btn btn-secondary text-white" id="exemple-15-btn">Changer couleur du parent</button>
+                                <button class="btn btn-primary" id="exemple-15-reset-btn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-5">
+                        <h3>Exemple 16: Événement click.</h3>
+                        <div>Vous pouvez déclencher une action lors d'un clic avec l'aide de la fonction <strong class="code-tips">.click(handler: Function)</strong>.</div>
+                        <div id="exemple16">
+                            <div class="my-1 border p-5" id="exemple-16-content">Cliquez sur le bouton pour changer ma couleur. L'action du clic se situe sur les boutons.</div>
+                            <div class="mt-3">
+                                <button class="btn btn-secondary text-white" id="exemple-16-btn">Changer la couleur</button>
+                                <button class="btn btn-primary" id="exemple-16-reset-btn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-5">
+                        <h3>Exemple 17: Supprimer un élément.</h3>
+                        <div>Vous pouvez supprimer un élément avec l'aide de la fonction <strong class="code-tips">.remove([selector: string])</strong>.</div>
+                        <div id="exemple17">
+                            <div id="exemple-17-parent">
+                                <div class="my-1 border p-5" id="exemple-17-content">Cet élément sera supprimé lorsque vous appuierez sur le bouton.</div>
+                            </div>
+                            <div class="mt-3">
+                                <button class="btn btn-secondary text-white" id="exemple-17-btn">Supprimer l'élément</button>
+                                <button class="btn btn-primary" id="exemple-17-reset-btn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-5">
+                        <h3>Exemple 18: Animer un élément.</h3>
+                        <div>Vous pouvez animer un élément avec l'aide de la fonction <strong class="code-tips">.animate(properties: object [, duration: (default: 400)] [, easing (default: swing)] [, complete: Function])</strong>.</div>
+                        <div id="exemple18">
+                            <div class="my-1 border p-5 position-relative" id="exemple-18-content">Cet élément sera animé lorsque vous appuierez sur le bouton.</div>
+                            <div class="mt-3">
+                                <button class="btn btn-secondary text-white" id="exemple-18-btn">Animer l'élément</button>
+                                <button class="btn btn-primary" id="exemple-18-reset-btn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="row mt-5">
-                    <h3>Exemple 10: Ajouter un élément après un autre élément.</h3>
-                    <div>Vous pouvez ajouter un élément après un autre élément avec l'aide de la fonction <strong class="code-tips">.after(content)</strong>.</div>
-                    <div id="exemple10">
-                        <div class="my-1 border p-5" id="exemple-10-content">Un élément va s'ajouter <strong>après</strong> moi lorsque vous appuyerez sur le bouton.</div>
-                        <div class="mt-3">
-                            <button class="btn btn-secondary text-white" id="exemple-10-btn">Ajouter du texte après</button>
-                            <button class="btn btn-primary" id="exemple-10-reset-btn">Reset</button>
+                    <div class="row mt-5">
+                        <h3>Exemple 19: Sélectionner l'élément suivant.</h3>
+                        <div>Vous pouvez sélectionner l'élément suivant avec l'aide de la fonction <strong class="code-tips">.next()</strong>.</div>
+                        <div id="exemple19">
+                            <div class="my-1 border p-5">Premier élément</div>
+                            <div class="my-1 border p-5" id="exemple-19-content">Je suis l'élement séléctionné de base.</div>
+                            <div class="my-1 border p-5">Troisième élément</div>
+                            <div class="mt-3">
+                                <button class="btn btn-secondary text-white" id="exemple-19-btn">Sélectionner l'élément suivant</button>
+                                <button class="btn btn-primary" id="exemple-19-reset-btn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-5">
+                        <h3>Exemple 20: Sélectionner l'élément précédent.</h3>
+                        <div>Vous pouvez sélectionner l'élément précédent avec l'aide de la fonction <strong class="code-tips">.prev()</strong>.</div>
+                        <div id="exemple20">
+                            <div class="my-1 border p-5">Premier élément</div>
+                            <div class="my-1 border p-5" id="exemple-20-content">Je suis l'élement séléctionné de base.</div>
+                            <div class="my-1 border p-5">Troisième élément</div>
+                            <div class="mt-3">
+                                <button class="btn btn-secondary text-white" id="exemple-20-btn">Sélectionner l'élément précédent</button>
+                                <button class="btn btn-primary" id="exemple-20-reset-btn">Reset</button>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="container" id="exemples-container">
+                    <div class="row mt-5">
+                        <h3>Exemple 1: Modifier le texte d'un élément.</h3>
+                        <div>Vous pouvez modifier le texte d'un élément avec l'aide de la fonction <strong class="code-tips">.text(text: string)</strong>.</div>
+                        <div id="exemple1">
+                            <div class="my-1 border p-5" id="exemple-1-content">Lorsque vous appuierez sur le bouton mon contenue de texte changera.</div>
+                            <div class="mt-3">
+                                <button class="btn btn-secondary text-white" id="exemple-1-btn">Changer le texte</button>
+                                <button class="btn btn-primary" id="exemple-1-reset-btn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <h3>Exemple 2: Disparition avec une animation.</h3>
+                        <div>Vous pouvez faire une animation de disparation avec l'aide de la la fonction <strong class="code-tips">.slideUp([duration: (default: 400)] [, complete: Function])</strong>.</div>
+                        <div id="exemple2">
+                            <div class="my-1 border p-5" id="exemple-2-content">Lorsque vous appuierez sur le bouton je vais me cacher avec une animation.</div>
+                            <div class="mt-3">
+                                <button class="btn btn-secondary text-white" id="exemple-2-btn">Cacher le texte</button>
+                                <button class="btn btn-primary" id="exemple-2-reset-btn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <h3>Exemple 3: Basculer avec une animation.</h3>
+                        <div>Vous pouvez faire une animation de basculement avec l'aide de la fonction <strong class="code-tips">.slideToggle([duration: (default: 400)] [, complete: Function])</strong>.</div>
+                        <div id="exemple3">
+                            <div class="my-1 border p-5" id="exemple-3-content">Lorsque vous appuierez sur le bouton je vais basculer avec une animation de slide.</div>
+                            <div class="mt-3">
+                                <button class="btn btn-secondary text-white" id="exemple-3-btn">Basculer le texte</button>
+                                <button class="btn btn-primary" id="exemple-3-reset-btn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="row mt-5">
+                        <h3>Exemple 4: Apparition avec une opacité.</h3>
+                        <div>Vous pouvez faire apparaître un élément via son opacité avec l'aide de la fonction <strong class="code-tips">.fadeIn([duration: (default: 400)] [, complete: Function])</strong>.</div>
+                        <div id="exemple4">
+                            <div class="my-1 border p-5" id="exemple-4-content" style="display: none;">Lorsque vous appuierez sur le bouton je vais apparaître graduellement.</div>
+                            <div class="mt-3">
+                                <button class="btn btn-secondary text-white" id="exemple-4-btn">Apparaitre</button>
+                                <button class="btn btn-primary" id="exemple-4-reset-btn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="row mt-5">
+                        <h3>Exemple 5: Disparition avec une opacité.</h3>
+                        <div>Vous pouvez faire disparaître un élément via son opacité avec l'aide de la fonction <strong class="code-tips">.fadeOut([duration: (default: 400)] [, complete: Function])</strong>.</div>
+                        <div id="exemple5">
+                            <div class="my-1 border p-5" id="exemple-5-content">Lorsque vous appuierez sur le bouton je vais disparaître graduellement.</div>
+                            <div class="mt-3">
+                                <button class="btn btn-secondary text-white" id="exemple-5-btn">Disparaitre</button>
+                                <button class="btn btn-primary" id="exemple-5-reset-btn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="row mt-5">
+                        <h3>Exemple 6: Basculer  avec une opacité</h3>
+                        <div>Vous pouvez faire un basculement d'opacité avec l'aide de la fonction <strong class="code-tips">.fadeToggle([duration: (default: 400)] [, complete: Function])</strong>.</div>
+                        <div id="exemple6">
+                            <div class="my-1 border p-5" id="exemple-6-content">Lorsque vous appuierez sur le bouton je vais basculer en opacité ( visible / invisible ).</div>
+                            <div class="mt-3">
+                                <button class="btn btn-secondary text-white" id="exemple-6-btn">Basculer l'apparition</button>
+                                <button class="btn btn-primary" id="exemple-6-reset-btn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="row mt-5">
+                        <h3>Exemple 7: Changer l'opacité d'un élément.</h3>
+                        <div>Vous pouvez changer l'opacité d'un élément avec l'aide de la fonction <strong class="code-tips">.fadeTo(duration: number, opacity: float [, complete: Function])</strong>.</div>
+                        <div id="exemple7">
+                            <div class="my-1 border p-5" id="exemple-7-content">Lorsque vous appuierez sur le bouton, mon opacité changera.</div>
+                            <div class="mt-3">
+                                <button class="btn btn-secondary text-white" id="exemple-7-btn">Changer l'opacité</button>
+                                <button class="btn btn-primary" id="exemple-7-reset-btn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="row mt-5">
+                        <h3>Exemple 8: Ajouter un élément au début.</h3>
+                        <div>Vous pouvez ajouter un élément au début d'un autre élément avec l'aide de la fonction <strong class="code-tips">.prepend(content)</strong>.</div>
+                        <div id="exemple8">
+                            <div class="my-1 border p-5" id="exemple-8-content">Du contenu s'ajoutera avant ce texte lorsque vous appuierez sur le bouton.</div>
+                            <div class="mt-3">
+                                <button class="btn btn-secondary text-white" id="exemple-8-btn">Ajouter du texte au début</button>
+                                <button class="btn btn-primary" id="exemple-8-reset-btn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="row mt-5">
+                        <h3>Exemple 9: Ajouter un élément avant un autre élément.</h3>
+                        <div>Vous pouvez ajouter un élément avant un autre élément avec l'aide de la fonction <strong class="code-tips">.before(content)</strong>.</div>
+                        <div id="exemple9">
+                            <div class="my-1 border p-5" id="exemple-9-content">Un élément va s'ajouter <strong>avant</strong> moi lorsque vous appuierez sur le bouton.</div>
+                            <div class="mt-3">
+                                <button class="btn btn-secondary text-white" id="exemple-9-btn">Ajouter du texte avant</button>
+                                <button class="btn btn-primary" id="exemple-9-reset-btn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="row mt-5">
+                        <h3>Exemple 10: Ajouter un élément après un autre élément.</h3>
+                        <div>Vous pouvez ajouter un élément après un autre élément avec l'aide de la fonction <strong class="code-tips">.after(content)</strong>.</div>
+                        <div id="exemple10">
+                            <div class="my-1 border p-5" id="exemple-10-content">Un élément va s'ajouter <strong>après</strong> moi lorsque vous appuierez sur le bouton.</div>
+                            <div class="mt-3">
+                                <button class="btn btn-secondary text-white" id="exemple-10-btn">Ajouter du texte après</button>
+                                <button class="btn btn-primary" id="exemple-10-reset-btn">Reset</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -322,6 +463,8 @@
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
                     <div class="col-auto"><div class="small m-0">Copyright &copy; Vanwassenhove Kevin 2024</div></div>
                     <div class="col-auto">
+                        <a class="small" href="#">Accueil</a>
+                        <span class="mx-1">&middot;</span>
                         <a class="small" href="#!">Privacy</a>
                         <span class="mx-1">&middot;</span>
                         <a class="small" href="#!">Terms</a>
