@@ -137,7 +137,7 @@ $(function(){
     /* Exemple 11 */
     $('#exemple-11-btn').click(function(){
         $('#exemple-11-content').css({
-            'background-color': 'grey'
+            'background-color': 'lightgreen'
         });
     });
     $('#exemple-11-reset-btn').click(function(){
